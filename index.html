@@ -8,36 +8,26 @@
 body {
     margin: 0;
     background: #f5f5f5;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
 }
 
-/* container responsive */
+/* container */
 .video-box {
-    width: 100%;
-    max-width: 420px; /* ukuran HP enak, di PC tetap rapi */
-    margin: 20px;
-    position: relative;
+    width: 95%;
+    max-width: 700px; /* biar lebih gede di PC */
 }
 
-/* gambar auto menyesuaikan */
+/* gambar */
 .video-box img {
     width: 100%;
     height: auto;
     border-radius: 12px;
     display: block;
-}
-
-/* tombol play fake */
-.play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70px;
-    height: 70px;
-    background: rgba(0,0,0,0.6);
-    border-radius: 50%;
 }
 </style>
 </head>
@@ -47,7 +37,6 @@ body {
 <a href="https://blackhubs-official.github.io/congenial-palm-tree/">
     <div class="video-box">
         <img src="https://cdn.aceimg.com/b474c419b.jpg">
-        <div class="play"></div>
     </div>
 </a>
 
